@@ -10,12 +10,14 @@ export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk <br
 export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples<br />
 
 This is also usefull to add your own aliases and functions when using cmake and make like: <br />
+alias mk="make -j20" <br />
+alias cma="cmake .. -DPICO_BOARD=pico .." <br />
 alias cmawdb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1'''.." <br />
 alias cmaw="cmake .. -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1''' .." <br />
 alias cmawlhs="cmake .. -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1''' .." <br />
 alias cmadb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DPICO_BOARD=pico .." <br />
-alias cma="cmake .. -DPICO_BOARD=pico .." <br />
-alias mk="make -j20" <br />
+
+
 
 Copy the file https://github.com/raspberrypi/openocd/blob/rp2040/contrib/60-openocd.rules to /etc/udev/rules.d on your host computer and restart udev (systemctl restart udev)
 
