@@ -2,8 +2,20 @@
 
 ## Usage
 
-Clone or download repository, copy the contents of .devcontainer into your project
-Remove any existing "build" directory.
+Clone repository and include submodules:
+git clone --recurse-submodules https://github.com/boberace/rpi_pico_dc.git
+
+Add .bash_aliases file in .devcontainer folder and include next two lines:
+export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk
+export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples
+
+This is also usefull to add your own aliases and functions when using cmake and make like:
+alias cmawdb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1'''.."
+alias cmaw="cmake .. -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1''' .."
+alias cmawlhs="cmake .. -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w -DWIFI_SSID='''name''' -DWIFI_PASSWORD='''password''' -DTEST_TCP_SERVER_IP='''192.168.0.1''' .."
+alias cmadb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DPICO_BOARD=pico .."
+alias cma="cmake .. -DPICO_BOARD=pico .."
+alias mk="make -j20"
 
 Copy the file https://github.com/raspberrypi/openocd/blob/rp2040/contrib/60-openocd.rules to /etc/udev/rules.d on your host computer and restart udev (systemctl restart udev)
 
@@ -24,5 +36,5 @@ launch command.
 * pico-sdk
 * openocd - compiled for picoprobe and cmsis-dap
 * picotool
-* bootterm (for serial monitoring) - see https://github.com/wtarreau/bootterm
+* FreeRTOS
 
