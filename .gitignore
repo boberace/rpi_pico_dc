@@ -33,3 +33,7 @@
 
 build/**
 .vscode/.cortex-debug.*
+
+# .bash_aliases contain passwords - need to create one in .devcontainer 
+# to include PICO_UROS_PATH and PICO_EXAMPLES_PATH if using
+.bash_aliases

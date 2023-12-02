@@ -1,0 +1,6 @@
+[submodule "micro_ros_raspberrypi_pico_sdk"]
+	path = micro_ros_raspberrypi_pico_sdk
+	url = https://github.com/boberace/micro_ros_raspberrypi_pico_sdk.git
+[submodule "pico-examples"]
+	path = pico-examples
+	url = https://github.com/boberace/pico-examples.git
