@@ -32,7 +32,9 @@ RUN cd /home/vscode/pico && git clone https://github.com/raspberrypi/openocd.git
 RUN cd /home/vscode/pico && git clone https://github.com/raspberrypi/picotool.git --depth=1 && \
     cd picotool && mkdir build && cd build && cmake ../ && make -j 24 && cp picotool /usr/local/bin 
 RUN cd /home/vscode/pico && git clone https://github.com/FreeRTOS/FreeRTOS-Kernel.git --depth=1 && git -C FreeRTOS-Kernel submodule update --init
+# RUN cd /home/vscode/pico && git clone https://github.com/FreeRTOS/FreeRTOS.git --recurse-submodules
 ENV FREERTOS_KERNEL_PATH=/home/vscode/pico/FreeRTOS-Kernel
+# ENV FREERTOS_KERNEL_PATH=/home/vscode/pico/FreeRTOS/FreeRTOS/Source
 RUN cd /usr/bin && ln -s /usr/bin/objdump objdump-multiarch && ln -s /usr/bin/nm nm-multiarch 
 
 

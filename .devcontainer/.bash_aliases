@@ -1,0 +1,29 @@
+
+# Personal Alias definitions.
+# ignored by git, so you can store personal data and aliases
+
+if [ -f .devcontainer/.bash_personal ]; then
+    . .devcontainer/.bash_personal
+fi
+
+
+
+export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk
+export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples
+
+alias sba="source ~/.bash_aliases"
+
+alias cmawdb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w .."
+alias cmaw="cmake .. -DBTSTACK_EXAMPLES_ALL=1 -DPICO_BOARD=pico_w .."
+alias cmadb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DPICO_BOARD=pico .."
+alias cma="cmake .. -DPICO_BOARD=pico .."
+alias mk="make -j20"
+
+ppc() { openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl ;}
+alias gdbm="gdb-multiarch"
+# target remote localhost:3333
+ppp() { openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "program \"$@\" verify reset exit" ;}
+ptp() { sudo picotool load -f -x $@;}
+
+alias mca0="sudo minicom -D /dev/ttyACM0"
+alias mca1="sudo minicom -D /dev/ttyACM1"
