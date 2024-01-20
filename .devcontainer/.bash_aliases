@@ -19,10 +19,10 @@ alias cmadb="cmake .. -DCMAKE_BUILD_TYPE=Debug -DPICO_BOARD=pico .."
 alias cma="cmake .. -DPICO_BOARD=pico .."
 alias mk="make -j20"
 
-ppc() { openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl ;}
+ppc() { sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl ;}
 alias gdbm="gdb-multiarch"
 # target remote localhost:3333
-ppp() { openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "program \"$@\" verify reset exit" ;}
+ppp() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "program \"$@\" verify reset exit" ;}
 ptp() { sudo picotool load -f -x $@;}
 
 alias mca0="sudo minicom -D /dev/ttyACM0"

@@ -10,6 +10,7 @@
         "--security-opt",
         "seccomp=unconfined",
         "--privileged",
+        "-v", "/etc/udev/rules.d/:/etc/udev/rules.d/",
         "-v", "/dev/bus/usb:/dev/bus/usb",
         "--device=/dev/bus/usb",
         "--device=/dev/ttyACM0"
@@ -32,8 +33,11 @@
         "twxs.cmake",
         "eamodio.gitlens",
         "xaver.clang-format",
-        "chris-hock.pioasm"
+        "chris-hock.pioasm",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
     ],
+    // "appPort": [3333, 4444, 6666, 50000, 50001, 50002],
     "mounts": [
         "source=${localWorkspaceFolder}/.devcontainer/.bash_aliases,target=/home/vscode/.bash_aliases,type=bind" 
     ],
