@@ -23,7 +23,9 @@ ppc() { sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl ;}
 alias gdbm="gdb-multiarch"
 # target remote localhost:3333
 ppp() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "program \"$@\" verify reset exit" ;}
-ptp() { sudo picotool load -f -x $@;}
+ppr() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "init; reset; exit" ;}
+
+ptp() { sudo picotool load -F -x $@;}
 
 alias mca0="sudo minicom -D /dev/ttyACM0"
 alias mca1="sudo minicom -D /dev/ttyACM1"
