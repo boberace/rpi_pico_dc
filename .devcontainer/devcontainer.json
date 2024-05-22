@@ -36,7 +36,8 @@
         "xaver.clang-format",
         "chris-hock.pioasm",
         "GitHub.copilot",
-        "GitHub.copilot-chat"
+        "GitHub.copilot-chat",
+        "george-alisson.html-preview-vscode"
     ],
     // "appPort": [3333, 4444, 6666, 50000, 50001, 50002],
     "mounts": [
