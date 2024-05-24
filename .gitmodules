@@ -4,3 +4,6 @@
 [submodule "pico-examples"]
 	path = pico-examples
 	url = https://github.com/boberace/pico-examples.git
+[submodule "libwebsockets"]
+	path = libwebsockets
+	url = https://libwebsockets.org/repo/libwebsockets
