@@ -23,6 +23,7 @@
         "stdio.h": "c",
         "string_view": "c",
         "sstream": "c",
-        "random": "c"
+        "random": "c",
+        "libwebsockets.h": "c"
     }
 }
