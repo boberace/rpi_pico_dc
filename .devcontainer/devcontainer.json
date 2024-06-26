@@ -5,6 +5,11 @@
     "build": {
         "dockerfile": "Dockerfile",
     },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "mounts": [
+      "source=${localWorkspaceFolder}/path/to/project,target=/workspace,type=bind"
+    ],
     "runArgs": [
         "--cap-add=SYS_PTRACE",
         "--security-opt",
@@ -50,5 +55,6 @@
     // "postCreateCommand": "gcc -v",
 
     // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash"
 }

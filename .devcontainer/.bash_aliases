@@ -8,9 +8,14 @@ fi
 
 
 
+<<<<<<< Updated upstream
 export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk
 export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples
 export LIB_WEB_SOCKETS=/workspaces/rpi_pico_dc/libwebsockets
+=======
+export PICO_UROS_PATH=/workspace/micro_ros_raspberrypi_pico_sdk
+export PICO_EXAMPLES_PATH=/workspace/pico-examples
+>>>>>>> Stashed changes
 
 alias sba="source ~/.bash_aliases"
 
@@ -24,7 +29,9 @@ ppc() { sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -s tcl ;}
 alias gdbm="gdb-multiarch"
 # target remote localhost:3333
 ppp() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "program \"$@\" verify reset exit" ;}
-ppr() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "init; reset; exit" ;}
+# ppr() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "init; reset; exit" ;}
+
+ppr() { sudo openocd -f interface/cmsis-dap.cfg -c "adapter speed 5000" -f target/rp2040.cfg -c "init ; reset halt ; rp2040.core0 arp_reset assert 0 ; rp2040.core1 arp_reset assert 0 ; exit" ;}
 
 ptp() { sudo picotool load -F -x $@;}
 
