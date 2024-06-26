@@ -8,14 +8,9 @@ fi
 
 
 
-<<<<<<< Updated upstream
 export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk
 export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples
 export LIB_WEB_SOCKETS=/workspaces/rpi_pico_dc/libwebsockets
-=======
-export PICO_UROS_PATH=/workspace/micro_ros_raspberrypi_pico_sdk
-export PICO_EXAMPLES_PATH=/workspace/pico-examples
->>>>>>> Stashed changes
 
 alias sba="source ~/.bash_aliases"
 
