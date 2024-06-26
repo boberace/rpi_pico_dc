@@ -3,7 +3,8 @@
 ## Usage
 
 Clone repository and include submodules: <br />
-git clone --recurse-submodules https://github.com/boberace/rpi_pico_dc.git<br />
+git clone --recurse-submodules https://github.com/boberace/rpi_pico_dc.git && cd rpi_pico_dc && git submodule update --init --recursive --remote<br />
+
 
 .bash_aliases file is in the .devcontainer folder
 It is automatically loaded by ~/.bashrc in the container
