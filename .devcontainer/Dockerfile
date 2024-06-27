@@ -53,7 +53,7 @@ RUN cd $WD_PATH && \
     git clone https://github.com/raspberrypi/openocd.git --branch rp2040 --depth=1 --no-single-branch && \
     cd openocd && \
     ./bootstrap && \
-    ./configure --enable-picoprobe && \
+    ./configure --enable-ftdi --enable-sysfsgpio --enable-bcm2835gpio && \
     make -j$(nproc) && \
     make install   
 
