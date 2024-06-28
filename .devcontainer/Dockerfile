@@ -17,6 +17,7 @@ RUN apt-get update && \
         texinfo \
         libtool \
         libftdi-dev \
+        pkg-config \
         libusb-1.0-0-dev \
         minicom
 
