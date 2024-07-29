@@ -10,6 +10,7 @@ fi
 
 export PICO_UROS_PATH=/workspaces/rpi_pico_dc/micro_ros_raspberrypi_pico_sdk
 export PICO_EXAMPLES_PATH=/workspaces/rpi_pico_dc/pico-examples
+export LIB_LORAMAC_NODE_PATH=/workspaces/rpi_pico_dc/loramac-node
 export LIB_WEB_SOCKETS=/workspaces/rpi_pico_dc/libwebsockets
 
 alias sba="source ~/.bash_aliases"
