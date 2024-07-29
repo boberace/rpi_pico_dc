@@ -4,6 +4,3 @@
 [submodule "micro_ros_raspberrypi_pico_sdk"]
 	path = micro_ros_raspberrypi_pico_sdk
 	url = https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk.git
-[submodule "loramac-node"]
-	path = loramac-node
-	url = https://github.com/lora-net/loramac-node.git
