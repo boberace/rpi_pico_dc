@@ -24,6 +24,19 @@
         "string_view": "c",
         "sstream": "c",
         "random": "c",
-        "libwebsockets.h": "c"
-    }
+        "libwebsockets.h": "c",
+        "cstdlib": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "bitset": "c",
+        "chrono": "c",
+        "algorithm": "c"
+    },
+    "cmake.sourceDirectory": "/workspaces/rpi_pico_dc/pico-examples/i2c/bmp280_i2c"
 }
